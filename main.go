@@ -48,6 +48,14 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
+	// Get database connection to pSQL
+	/*
+		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+
 	// We use our custom CORS Middleware
 	r.Use(CORS)
 
