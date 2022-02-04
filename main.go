@@ -7,6 +7,8 @@ import (
 	"os"
 	"time"
 
+	db "api/database/db"
+
 	"github.com/gorilla/mux"
 )
 
@@ -49,12 +51,7 @@ func main() {
 	}
 
 	// Get database connection to pSQL
-	/*
-		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
-		if err != nil {
-			log.Fatal(err)
-		}
-	*/
+	db.Connect()
 
 	// We use our custom CORS Middleware
 	r.Use(CORS)
