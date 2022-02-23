@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	db "api/database/db"
+	db "api/database"
 
 	"github.com/gorilla/mux"
 )
