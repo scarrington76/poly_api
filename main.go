@@ -1,13 +1,12 @@
 package main
 
 import (
+	"api/database"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"time"
-
-	db "api/database"
 
 	"github.com/gorilla/mux"
 )
@@ -51,7 +50,7 @@ func main() {
 	}
 
 	// Get database connection to pSQL
-	db.Connect()
+	database.Connect()
 
 	// We use our custom CORS Middleware
 	r.Use(CORS)
