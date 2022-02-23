@@ -1,7 +1,6 @@
 package main
 
 import (
-	"api/database"
 	"fmt"
 	"log"
 	"net/http"
@@ -50,7 +49,7 @@ func main() {
 	}
 
 	// Get database connection to pSQL
-	database.Connect()
+	// database.Connect()
 
 	// We use our custom CORS Middleware
 	r.Use(CORS)
