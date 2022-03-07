@@ -48,11 +48,11 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	// Get database connection to pSQL
-	// database.Connect()
-
 	// We use our custom CORS Middleware
 	r.Use(CORS)
+
+	// Get database connection to pSQL
+	// database.Connect()
 
 	fmt.Print("API initiated")
 	r.HandleFunc("/tests", GETHandler)
